@@ -1,0 +1,469 @@
+/*body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: #61B4F6; }
+
+.one {
+  display: flex;
+  flex-direction: column; }
+  .one__header {
+    height: 100px;
+    width: 100%; }
+  .one__image__icon {
+    fill: white; }
+    */
+
+/*
+@import "header";
+@import "realtors";
+@import "features";
+@import "story";
+@import "homes";
+@import "gallery";
+@import "footer";
+*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+html{
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #61B4F6; 
+  height: 100vh;
+  width: 100%;
+}
+
+.logofix{
+  font-size: 40px; bottom: 0px; left: 0px; margin-left: -60px; margin-bottom: -30px;
+}
+@media (max-width: 700px){
+ body{ 
+   display: grid;
+   grid-template-columns: 1fr;
+ }
+ .one{
+   display: none;
+ }
+ .two{
+   display: none;
+ }
+ .container{
+   
+ }
+}
+@media (max-width: 1200px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .logofix{
+    margin-left: 0;
+    font-size: 20px;
+    position: absolute;
+    display: none;
+    
+  }
+  .bell{
+    display: none;
+  }
+  .usercontainer{
+    display: none;
+    opacity: 0;
+  }
+  .user{
+    display: none;
+  }
+}
+.headertop{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+
+  background-color:white;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.headeruser{
+  color: #61A6D7;
+
+  font-size: 40px;
+  position: relative;
+
+}
+@media (min-width:1200px){
+  .headertop{
+    display: none;
+  }
+}
+ .headeruser-plus{
+  font-size: 15px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 20px;
+  border: 3px solid #61A6D7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+ }
+ .headerusercontainer{
+   color: white;
+   display: flex;
+   flex-direction: column;
+   font-size: 30px;
+   margin-left: 30px;
+ }
+.header{
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+}
+.one{
+  display: block;
+  display: flex;
+  flex-direction: column;
+  
+}
+.one__header{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 20px;
+}
+.one__image{  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.one__image  div{
+  width: 130px;
+  margin-left: auto;
+  margin-right: -3px;
+}
+.one__image img{
+  width: 100%;
+}
+.two{
+  display: flex;
+  flex-direction: column;
+}
+.two__header{
+  width: 100%;
+  height: 50px;
+}
+.two__image{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.two__image div{
+  width: 130px;
+  margin-left: -2px;
+  margin-right: auto;
+}
+.two__image img{
+  width: 100%;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+
+}
+.container__header{
+  width: 100%;
+  height: 20vh;
+  position: relative;
+}
+.logo{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 20px;
+  font-size: 70px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9A6024;
+  text-shadow: black 10px 5px 40px;
+  
+}
+
+.container__body{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+.welcome{
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 500px;
+  
+}
+.welcome h3{
+  text-transform: uppercase; 
+  font-size: 55px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+.welcome p{
+  font-size: 20px;
+  margin-left: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.welcome a:link, .welcome a:visited{
+  text-transform: uppercase;  
+  padding: 17px;
+  background-image: linear-gradient(180deg, #91FFFF 1%, #8EFEFF 3%, #59C8F3 7%, #4FC0FC 9%, #3D92D3 99%, #3E7BAA 100%);
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10px;
+  border-top: 1px solid #58B2E4;
+  border-left: 1px solid #297BB7;
+  border-bottom: 1px solid #226091;
+  border-right: 1px solid #146197;
+  box-shadow: 2px 2px 3px #146197;
+  
+  
+}
+.welcome a:hover{
+
+}
+.welcome a:active{
+
+}
+.signUpContainer{
+  width: 500px;
+  transform: translate(-30%, -20%);
+
+  
+}
+.signUpForm{
+  
+  width: 500px;
+  height: 350px;
+  margin: 0 auto;
+  background-image: linear-gradient(#DCF1FF, #91D6FE);
+  margin-left: 0px;
+  border-radius: 50px;
+  border: 2px solid #61A6D7;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0px 4px 4px  #14568B;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+
+.signUpWrap{
+  width:250px;
+
+  margin: 0 auto;
+}
+.signUpWrap input{
+  padding: 10px;
+  border:4px solid #6AB2E5;
+  border-radius: 8px;
+  margin: 2px;
+  width: 100%;
+  font-size: 20px;
+  color: #6AB2E5;
+  
+}
+.signUpWrap input::-webkit-input-placeholder{
+  color: #6AB2E5;
+  font-size: 20px;
+  font-weight: bold;
+}
+.signUpWrap h4{
+  color: #9A6024;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: black 2px 2px 50px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.signUpWrap button{
+  width: 100%;
+  margin-top: 20px;
+  border:3px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #61B4F6;
+  font-size: 30px;
+}
+.navigation{
+  background-color: white;
+  width: 100%;
+  height: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ }
+ .navigationList{
+     list-style: none;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     height: 100%;
+     margin-left: 30px;
+ }
+ .navigationItem{
+     padding: 15px;
+     width: 100%;
+     background-color: #61B4F6;
+    box-sizing: border-box;
+     border-top-left-radius: 50px;
+     border-bottom-left-radius: 50px;
+ }
+ .navigationLink{
+     text-decoration: none;
+     color: white;
+     font-size: 23px;
+ }
+ .navigationNumber{
+  padding: 5px;
+  margin-left: -5px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: white;
+  color: #61B4F6;
+  font-size: 30px;
+  font-weight: bold;
+ }
+ .bell{
+   position: absolute;
+   top: 30px;
+   right: 30px;
+   font-size: 40px;
+   color: #61B4F6;
+   font-weight: none;
+ }
+ .user{
+  color: white;
+
+  font-size: 60px;
+  position: relative;
+
+}
+ .user-plus{
+  font-size: 25px;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  width: 35px;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  background-color: #61B4F6;
+  border-radius: 50%;
+ }
+ .usercontainer{
+   color: white;
+   display: flex;
+   flex-direction: column;
+   font-size: 30px;
+   margin-left: 30px;
+ }
+ .forumTable{
+   margin-top: 30px;
+   width: 96%;
+   margin-left: 30px;
+   display: grid;
+   grid-template-rows: 50px 1fr;
+   grid-template-columns: 1fr;
+   font-family: 'Arial Narrow', Arial, sans-serif;
+
+ }
+ .tableHeader{
+   color: white;
+   background-color: #333333;
+   border: 3px solid #F5F5F5;
+   width: 100%;
+   display: flex;
+   padding: 10px;
+   border-radius: 4px;
+  
+ }
+ .tableRow{
+   border: 2px solid #f5f5f5;
+   padding: 1px;
+   box-shadow: 1px 2px 2px #8BA8A4;
+ }
+ .tableData{
+  display: grid;
+  grid-template-columns: 80px 2fr 100px 1fr;
+  border-bottom: 1px dashed grey;
+ }
+.tableCell{
+
+}
+.tableText{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 10px;
+}
+.tableText h4{
+  color: rgb(202, 89, 61);
+}
+.tableText p{
+  color: #504d4f;
+  font-size: 12px;
+  margin-top: 5px;
+  
+}
+.tableContent{
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  padding: 10px 10px;
+  text-align: right;
+  color: #504d4f;
+}
+
+.tableFolder{
+  color: #8BA8A4;
+  display: flex;
+  font-size:  30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  justify-content: center;
+}
+.tableQuestion{
+  padding: 10px 10px;
+  color: rgb(202, 89, 61);
+}
+.question{
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.questionUser{
+  color: rgb(202, 89, 61);
+}
