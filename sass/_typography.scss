@@ -1,0 +1,14 @@
+.one{
+    display: flex;
+    flex-direction: column;
+    &__header{
+        height: 100px;
+        width: 100%;
+    }
+    &__image{
+        &__icon{
+            fill: white;
+        }
+    }
+    
+}

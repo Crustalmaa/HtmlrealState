@@ -1,0 +1,9 @@
+$color-primary: #61B4F6;
+$color-primary-dark: white;
+
+$color-secondary: #9A6024;
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: $color-primary;
+}
